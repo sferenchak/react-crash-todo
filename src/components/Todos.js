@@ -18,7 +18,6 @@ class Todos extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1>Todos</h1>
 				<ul>{this.renderList()}</ul>
 			</div>
 		);
@@ -27,7 +26,9 @@ class Todos extends React.Component {
 
 //PropTypes
 Todos.propTypes = {
-	todos: PropTypes.array.isRequired
+	todos: PropTypes.array.isRequired,
+	changeCompletion: PropTypes.func.isRequired,
+	deleteTodo: PropTypes.func.isRequired
 };
 
 export default Todos;
